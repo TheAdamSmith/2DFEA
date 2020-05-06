@@ -1,0 +1,78 @@
+ID Test All File
+$*
+$*  COORDINATE SYSTEM CARDS
+$*
+CORD2R         4       0 20.0000     0.0     0.0 20.0000     0.0 20.0000+ 
++        34.1414-14.1429     0.0
+$*
+$*  GRID CARDS
+$*
+GRID           1       0     0.0     0.0     0.0       0
+GRID           2       0 20.0000     0.0     0.0       4
+GRID           3       0 30.0000 30.0000     0.0       0
+GRID           4       0 15.0000 30.0000     0.0       0
+GRID           5       0     0.0 30.0000     0.0       0
+GRID           6       0 30.0000     0.0     0.0       0
+GRID           7       0 60.0000 60.0000     0.0       0
+GRID           8       0 60.0000 30.0000     0.0       0
+GRID           9       0 30.0000 45.0000     0.0       0
+GRID          10       0     0.0 45.0000     0.0       0
+GRID          11       0 30.0000 60.0000     0.0       0
+GRID          12       0     0.0 60.0000     0.0       0
+GRID          13       0 15.0000 60.0000     0.0       0
+$*
+$*  ELEMENT CARDS
+$*
+CQUAD4         1       1       1       4       3       2     0.0     0.0
+CTRIA3         2       1       2       6       3     0.0     0.0
+CTRIA3         3       1       1       5       4     0.0     0.0
+CBAR           4       2       6       3-1.00000     0.0     0.0
+CBAR           5       2       3       7-0.70711 0.70711     0.0
+CROD           6       3       8       3
+CQUAD8         7       1       5       3      11      12       4       9+ 
++             13      10                                     0.0     0.0
+RBAR           8       8       7  123456                  654321
+RBAR           9      13       9  123456                  654321
+$*
+$*  MATERIAL CARDS
+$*
+$*
+$*  I-DEAS Material: 1  name: GENERIC_ISOTROPIC_STEEL
+MAT1           1 2.07E+8 8.02E+7 0.29000 7.82E-6 1.17E-5 21.8500        + 
++        150000. 150000. 68000.0
+$*
+$*  I-DEAS Material: 2  name: MAT1  1
+MAT1           2 2.07E+8 8.02E+7 0.29000 7.82E-6 1.17E-5 21.8500        + 
++        150000. 150000. 68000.0
+$*
+$*  PROPERTY CARDS
+$*
+$*
+$*  I-DEAS property: 2  name: PBAR    2
+$*  Fore Section   : 2  name: PBAR 2_ RECT 2.000 X 5.000 X 0.000
+PBAR           2       2 10.0000 20.8333 3.33333 9.98042     0.0        + 
++        2.50000 1.00000 2.50000-1.00000-2.50000-1.00000-2.50000 1.00000
+$*
+$*  I-DEAS property: 3  name: PROD    3
+$*  Fore Section   : 3  name: PROD 3_ CIRC 3.909 X 0.000 X 0.000
+PROD           3       2 12.0000 19.4383     0.0     0.0
+$*
+$*  I-DEAS property: 1  name: PSHELL  1
+PSHELL         1       2 1.00000       2 1.00000       2 0.83333
+$*
+$*  RESTRAINT CARDS
+$*
+SPC            1       2       2 1.00E-3
+SPC            1       6       3     0.0
+SPC            1       5      13     0.0
+SPC            1       1     123     0.0
+$*
+$*  LOAD CARDS
+$*
+FORCE          1       7       0 1.00000 10.0000 10.0000     0.0
+GRAV           1       0 1.00000 9810.00     0.0     0.0
+$*
+$*  TEMPERATURE CARDS
+$*
+TEMPD          1    50.0
+$*
